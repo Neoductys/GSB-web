@@ -1,0 +1,82 @@
+#titre{
+color : #0555A8;
+font-size: 24px;
+font-weight: bold;
+}
+
+#contenu{
+margin-left:450px;
+width:400px;
+}
+
+#tableauFichesDuClients{
+padding-top :2000 px;
+width:400px;
+margin-left:300px;
+}
+
+#bloc
+{
+background-color: #EE8855;
+width : 1000px;
+margin-top:-460px;
+margin-left: 300px;
+border:
+}
+
+#entete{
+margin-left: 400px;
+}
+
+#bloc h1,#bloc h2{
+text-align:center;
+}
+
+#lowtitre
+{
+color : #0555A8;
+font-size: 24px;
+font-weight: bold;
+padding-top : 50px;
+padding-left : 50px;
+}
+
+#menu{
+width: 300px;
+margin-left: 50px;
+}
+
+#tableau{
+width : 1000px;
+margin-top:-600px;
+margin-left: 300px;
+}
+
+#tableauPercent{
+width : 1000px;
+margin-top:-5%;
+margin-left: 300px;
+}
+
+#suiviefrais{
+background-color: #EE8855;
+width : 1000px;
+margin-top:-500px;
+margin-left: 400px;
+color : white;
+}
+
+form{
+width:300px;
+}
+
+#widef{
+width:100px;
+}
+
+#FF{
+background-color: #77AADD;
+margin-top:-300px;
+margin-left: -100px;
+width:800px;
+}
