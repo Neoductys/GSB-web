@@ -1,0 +1,6 @@
+CREATE TRIGGER `TriggerVisiteur` 
+BEFORE INSERT 
+ON `visiteur`
+FOR EACH ROW
+INSERT INTO visiteur
+VALUES ('$chaine','$nom','$prenom','$login','$mdp','$adresse','$cp','$ville','$dateE');

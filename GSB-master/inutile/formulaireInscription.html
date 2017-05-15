@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title>formulaire d'inscription</title>
+	<link rel="stylesheet"
+				media="screen"
+				type="test/css"
+				title="CSS"
+				href="csstest.css"/>
+
+	<script type="text/javascript">
+
+	function verifChamps()
+	{
+		if (
+			((document.getElementById("nom").value=="")||
+			(document.getElementById("prenom").value=="")||
+			(document.getElementById("login").value=="")||
+			(document.getElementById("mdp").value=="")||
+			(document.getElementById("adresse").value=="")||
+			(document.getElementById("cp").value=="")||
+			(document.getElementById("ville").value=="")||
+			(document.getElementById("dateE").value==""))
+            )
+		{
+			alert("Remplir tous les champs");
+			return false;
+		}
+	}
+</script>
+
+
+
+</head>
+
+<body>
+<h1>Inscription</h1>
+<div id="corps"></br>
+<center>Attention: Les tous champs doivent être remplis.</center></br>
+<form method="post" name="inscription" action="inscription.php" onSubmit="return verifChamps()">
+<table align="center" cellspacing="2">
+   <tr >
+      <td>
+            Nom:
+      </td>
+      <td>
+            <input type="text" name="nom" id="nom" size="25" maxlength="25">
+      </td>
+   </tr>
+   
+   <tr >
+        <td>
+            Prénom:
+        </td>
+        <td>
+            <input type="text" name="prenom" id="prenom" size="25" maxlength="25">
+        </td>
+   </tr>
+      <tr >
+        <td>
+            Login:
+        </td>
+        <td>
+            <input type="text" name="login" id="login" size="25" maxlength="25">
+        </td>
+   </tr>
+   <tr >
+        <td>
+            Mot de passe (5 charactères ):
+        </td>
+        <td>
+            <input type="password" name="mdp" id="mdp" size="5" maxlength="5">
+        </td>
+   </tr>
+      <tr >
+        <td>
+            Adresse:
+        </td>
+        <td>
+            <input type="text" name="adresse" id="adresse" size="25" maxlength="25">
+        </td>
+   </tr>
+      <tr >
+        <td>
+            Code postal:
+        </td>
+        <td>
+            <input type="text" name="cp" id="cp" size="25" maxlength="25">
+        </td>
+   </tr>
+   <tr >
+        <td>
+            Ville:
+        </td>
+        <td>
+            <input type="text" name="ville" id="ville" size="25" maxlength="25">
+        </td>
+   </tr>
+   <tr >
+        <td>
+            Date d'embauche:
+        </td>
+        <td>
+            <input type="text" name="dateE" id="dateE" size="25" maxlength="25">
+        </td>
+   </tr>
+</table>
+
+  <p align="center"> 
+    <input type="submit" name="envoi" value="Envoyer">
+    <input type="reset" name="annulation" value="Annuler">
+  </p>
+  <br />
+  <center><a href="login.html">Retour 
+    &agrave; la page d'accueil</a></font></center><BR><BR>
+    
+</form>
+</div>
+</body>
+</html>

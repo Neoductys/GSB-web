@@ -1,0 +1,114 @@
+<html>
+<head>
+	<title>Gestion des frais de visite</title>
+	<link rel="stylesheet"
+				media="screen"
+				type="test/css"
+				title="CSS"
+				href="csstestComptable.css"/>
+	<script language="javascript">
+        function ajoutLigne( pNumero){//ajoute une ligne de produits/qté à la div "lignes"     
+			//masque le bouton en cours
+			document.getElementById("but"+pNumero).setAttribute("hidden","true");	
+			pNumero++;										//incrémente le numéro de ligne
+            var laDiv=document.getElementById("lignes");	//récupère l'objet DOM qui contient les données
+			var titre = document.createElement("label") ;	//crée un label
+			laDiv.appendChild(titre) ;						//l'ajoute à la DIV
+			titre.setAttribute("class","titre") ;			//définit les propriétés
+			titre.innerHTML= "   "+ pNumero + " : ";
+			//zone our la date du frais
+			var ladate = document.createElement("input");
+			laDiv.appendChild(ladate);
+			ladate.setAttribute("name","FRA_AUT_DAT"+pNumero);
+			ladate.setAttribute("size","12"); 
+			ladate.setAttribute("class","zone");
+			ladate.setAttribute("type","text");	
+			//zone de saisie pour un nouveau libellé			
+			var libelle = document.createElement("input");
+			laDiv.appendChild(libelle);
+			libelle.setAttribute("name","FRA_AUT_LIB"+pNumero);
+			libelle.setAttribute("size","30"); 
+			libelle.setAttribute("class","zone");
+			libelle.setAttribute("type","text");
+			//zone de saisie pour un nouveau montant		
+			var mont = document.createElement("input");
+			laDiv.appendChild(mont);
+			mont.setAttribute("name","FRA_AUT_MONT"+pNumero);
+			mont.setAttribute("size","3"); 
+			mont.setAttribute("class","zone");
+			mont.setAttribute("type","text");			
+			var bouton = document.createElement("input");
+			laDiv.appendChild(bouton);
+			//ajoute une gestion évenementielle en faisant évoluer le numéro de la ligne
+			bouton.setAttribute("onClick","ajoutLigne("+ pNumero +");");
+			bouton.setAttribute("type","button");
+			bouton.setAttribute("value","+");
+			bouton.setAttribute("class","zone");	
+			bouton.setAttribute("id","but"+ pNumero);				
+        }
+    </script>
+	
+</head>
+<body>
+
+	<div id="gauche">
+	<center><a href="index.html"><img src="logo.jpg" width="100" height="60"/></center></a>
+	<h2>Informations</h2>
+<ul>
+	<li><a href="Groupe.html">Le groupe GSB</a></li>
+	<li><a href="SI.html">L'organisation du réseau</a></li>
+</ul>
+</br>
+	<h2>Outils</h2>
+	<ul><li>Frais</li>
+		<ul>
+			<li><a href="formValidFrais.htm" >Enregistrer opération</a></li>
+		</ul>
+	</ul>
+	</div>
+	
+	
+	<div id="corps2">
+	<h1> Validation des frais par visiteur </h1>
+		<label class="titre">Choisir le visiteur :</label>
+			<select name="lstVisiteur" class="zone"><option value="a131">Villechalane</option></select>			
+			<label class="titre">Mois :</label> <input class="zone" type="text" name="dateValid" size="12" />
+		<p class="titre" />
+		<div style="clear:left;"><h2>Frais au forfait </h2></div>
+		<table style="color:white;" border="1">
+			<tr><th>Repas midi</th><th>Nuitée </th><th>Etape</th><th>Km </th><th>Situation</th></tr>
+			<tr align="center"><td width="80" ><input type="text" size="3" name="repas"/></td>
+				<td width="80"><input type="text" size="3" name="nuitee"/></td> 
+				<td width="80"> <input type="text" size="3" name="etape"/></td>
+				<td width="80"> <input type="text" size="3" name="km" /></td>
+				<td width="80"> 
+					<select size="3" name="situ">
+						<option value="E">Enregistré</option>
+						<option value="V">Validé</option>
+						<option value="R">Remboursé</option>
+					</select></td>
+				</tr>
+		</table>
+		
+		<p class="titre" /><div style="clear:left;"><h2>Hors Forfait</h2></div>
+		<table style="color:white;" border="1">
+			<tr><th>Date</th><th>Libellé </th><th>Montant</th><th>Situation</th></tr>
+			<tr align="center"><td width="100" ><input type="text" size="12" name="hfDate1"/></td>
+				<td width="220"><input type="text" size="30" name="hfLib1"/></td> 
+				<td width="90"> <input type="text" size="10" name="hfMont1"/></td>
+				<td width="80"> 
+					<select size="3" name="hfSitu1">
+						<option value="E">Enregistré</option>
+						<option value="V">Validé</option>
+						<option value="R">Remboursé</option>
+					</select></td>
+				</tr>
+		</table>		
+		<p class="titre"></p>
+		<div class="titre">Nb Justificatifs</div><input type="text" class="zone" size="4" name="hcMontant"/>		
+		<p class="titre" /><label class="titre">&nbsp;</label><input class="zone"type="reset" /><input class="zone"type="submit" />
+	</form>
+	</form>
+	</div>
+</body>
+</html>

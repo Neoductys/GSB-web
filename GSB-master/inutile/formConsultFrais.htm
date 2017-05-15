@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Suivi des frais de visite</title>
+	<link rel="stylesheet"
+				media="screen"
+				type="test/css"
+				title="CSS"
+				href="csstest.css"/>
+
+</head>
+<body>
+<div id="gauche">
+	<center><a href="index.html"><img src="logo.jpg" width="100" height="60"/></center></a>
+	<h2>Informations</h2>
+<ul>
+	<li><a href="Groupe.html">Le groupe GSB</a></li>
+	<li><a href="SI.html">L'organisation du réseau</a></li>
+</ul>
+</br>
+	<h2>Outils</h2>
+	<ul><li>Frais</li>
+		<ul>
+			<li><a href="formSaisieFrais.php" >Nouveau</a></li>
+			<li><a href="formConsultFrais.htm">Consulter</a></li>
+		</ul>
+	</ul>
+	</div>
+<div id="corps2">
+	<blockquote>
+	<h2>Suivi de remboursement des Frais</h2>
+	
+	<form name="formConsultFrais" method="post" action="chercheFrais.php">
+		<center><h3> Période </h3></center>
+			Mois/Année : <input class="zone" type="text" name="dateConsult" size="12" />
+		
+		<h2>Frais au forfait </h2>
+		<center>
+		<table  border="1">
+			<tr><th>Repas midi</th><th>Nuitée </th><th>Etape</th><th>Km </th><th>Situation</th><th>Date opération</th><th>Remboursement</th></tr>
+			<tr align="center"><td width="80"><label  size="3" name="repas"/></td>
+				<td width="80"><label size="3" name="nuitee"/></td> 
+				<td width="80"> <label size="3" name="etape"/></td>
+				<td width="80"> <label size="3" name="km" /></td>
+				<td width="80"> <label size="3" name="situation" /></td>	
+				<td width="80"> <label size="3" name="dateOper" /></td>	
+				<td width="80"> <label size="3" name="dateOper" /></td>						
+			</tr>
+		</table>
+		</center>
+		<h2>Hors Forfait</h2>
+		<center>
+		<table  border="1">
+			<tr><th>Date</th><th>Libellé </th><th>Montant</th><th>Situation</th><th>Date opération</th></tr>
+			<tr align="center"><td width="100" ><label size="12" name="hfDate1"/></td>
+				<td width="220"><label size="30" name="hfLib1"/></td> 
+				<td width="90" ><label size="10" name="hfMont1"/></td>
+				<td width="80"> <label size="3" name="hfSitu1" /></td>
+				<td width="80"> <label size="3" name="hfDateOper1" /></td>		
+				</tr>
+		</table>
+			</center>
+		<p class="titre"></p>
+		<div class="titre">Nb Justificatifs</div><input type="text" class="zone" size="4" name="hcMontant"/>
+	</form>
+	</blockquote>
+	</div>
+
+</body>
+</html>
